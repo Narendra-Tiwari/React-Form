@@ -1,0 +1,274 @@
+
+/* Container */
+/* .form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #000;
+  border: 2px solid #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  color: #fff;
+} */
+
+/* Row: label + control */
+/* .form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+} */
+
+/* Label */
+/* .form-row label {
+  width: 100px;
+  margin-right: 0.5rem;
+  color: #fff;
+} */
+
+/* Inputs & selects */
+/* .form-row input,
+.form-row select {
+  width: 180px;       
+  padding: 0.4rem;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  box-sizing: border-box;
+} */
+
+/* 
+.form-row .radio-group {
+  width: 180px;       
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;          
+}
+
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #fff;
+} */
+
+/* 
+.error {
+  color: #f88;
+  margin-left: 0.5rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+} */
+
+
+
+
+
+
+
+
+
+/* *::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #000;
+  border: 2px solid #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  color: #fff;
+}
+
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+.form-row label {
+  width: 100px;
+  margin-right: 0.5rem;
+  color: #fff;
+}
+
+
+.form-row input,
+.form-row select {
+  
+  flex: none !important;
+
+  width: 200px;
+  min-width: 200px;
+
+  padding: 0.4rem;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+
+.form-row .radio-group {
+  flex: none;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #fff;
+}
+
+.error {
+  color: #f88;
+  margin-left: 0.5rem;
+}
+
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.9;
+} */
+
+
+
+
+
+/* 1) Universal box‐sizing so padding/borders don’t bloat your widths */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2) Form container */
+.form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #000;
+  border: 2px solid #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* 3) Each row is a flex container */
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* 4) Label on the left */
+.form-row label {
+  width: 100px;
+  margin-right: 0.5rem;
+  color: #fff;
+}
+
+/* 5) ONLY inputs & selects get a fixed width */
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row select {
+  flex: none;              /* don’t grow/shrink */
+  width: 200px;            /* fixed equal width */
+  padding: 0.4rem;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+/* 6) Radio‐group flexes to fill remaining space */
+.form-row .radio-group {
+  flex: 1;                 /* fill leftover row width */
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;             /* space between each option */
+  white-space: nowrap;     /* prevent wrapping on very small screens */
+}
+
+/* 7) Keep each radio + its label dot & text together */
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #fff;
+}
+
+/* 8) Error messages */
+.error {
+  color: #f88;
+  margin-left: 0.5rem;
+}
+
+/* 9) Button (optional styling) */
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+
+
+
+.form-row input:not([type="radio"]),
+.form-row select {
+  flex: none;              /* no grow/shrink */
+  width: 200px;            /* identical width */
+  padding: 0.4rem;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  box-sizing: border-box;  /* ensure padding is included */
+}
+
+/* ▶️  Radio group still flexes to fill leftover space */
+.form-row .radio-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+}
+
+
