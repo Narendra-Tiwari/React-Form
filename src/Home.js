@@ -19,7 +19,7 @@ import React from 'react';
 export default function Home() {
   return (
     <div className="page home-page">
-      <h1>Welcome to the Home Page of Apaxion Technologies</h1>
+      <h1>Welcome to Home Page of Apaxion Technologies </h1>
       <p></p>
     </div>
   );
