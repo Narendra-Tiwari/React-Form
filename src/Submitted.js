@@ -28,7 +28,7 @@ export default function Submitted({ data }) {
   }
   return (
     <div className="page submitted-page">
-      <h1>Submission Details</h1>
+      <h1>Submission Details are </h1>
       <ul>
         <li><strong>Name:</strong> {data.Name}</li>
         <li><strong>Age:</strong> {data.Age}</li>
