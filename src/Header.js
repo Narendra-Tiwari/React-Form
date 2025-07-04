@@ -155,7 +155,7 @@ export default function Header({ logoSrc, profileImage, onImageSelect, onLogout 
         setDropdownOpen(false);
       }}
     >
-      New Profile f
+      New Profile
     </div>
     <div
       className="dropdown-item"
